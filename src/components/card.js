@@ -66,7 +66,15 @@ const cardAppender = (selector) => {
       const {
         articles
       } = res.data;
+
       const entryPoint = document.querySelector(selector);
+
+
+       // I know we aren't allowed to ask about the sprints, so I figured
+       // I might ask here. Is there a cleaner way to do what I'm doing below?
+       // It feels sort of hacky and If I needed each article to contain their
+       // category, I think I would be in trouble.
+
       Object.values(articles).forEach((category) => {
         category.forEach((article) => {
           entryPoint.appendChild(Card(article));

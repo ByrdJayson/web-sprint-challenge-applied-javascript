@@ -43,8 +43,6 @@ const tabsAppender = (selector) => {
     const entryPoint = document.querySelector(selector);
     entryPoint.appendChild(Tabs(res.data.topics));
 
-
-
   })
   .catch(err => {
     console.error(err);
