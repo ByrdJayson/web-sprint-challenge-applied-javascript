@@ -19,7 +19,11 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
-  const { headline, authorPhoto, authorName } = article;
+  const {
+    headline,
+    authorPhoto,
+    authorName
+  } = article;
 
   const cardDiv = document.createElement('div');
   const headlineDiv = document.createElement('div');
@@ -59,7 +63,9 @@ const cardAppender = (selector) => {
   axios.get(`http://localhost:5000/api/articles`)
     .then(res => {
 
-      const { articles } = res.data;
+      const {
+        articles
+      } = res.data;
       const entryPoint = document.querySelector(selector);
       Object.values(articles).forEach((category) => {
         category.forEach((article) => {
@@ -68,7 +74,6 @@ const cardAppender = (selector) => {
 
       });
 
-
     })
     .catch(err => {
       console.error(err);
@@ -76,4 +81,7 @@ const cardAppender = (selector) => {
 
 }
 
-export { Card, cardAppender }
+export {
+  Card,
+  cardAppender
+}
