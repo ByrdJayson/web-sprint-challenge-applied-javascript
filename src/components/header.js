@@ -44,7 +44,7 @@ const headerAppender = (selector) => {
   //
   const entryPoint = document.querySelector(selector);
 
-  entryPoint.appendChild(Header('Title', 'Date', 'Temp'));
+  entryPoint.appendChild(Header('Lorem ipsum', '10/29/2021', '54°'));
 
 }
 
