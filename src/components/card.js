@@ -32,6 +32,8 @@ const Card = (article) => {
   const img = document.createElement('img');
   const authorSpan = document.createElement('span');
 
+
+
   cardDiv.appendChild(headlineDiv);
   cardDiv.appendChild(authorDiv);
   authorDiv.appendChild(imgContainer);
@@ -46,6 +48,10 @@ const Card = (article) => {
   headlineDiv.textContent = headline;
   img.src = authorPhoto;
   authorSpan.textContent = `By ${authorName}`;
+
+  cardDiv.addEventListener('click', function(){
+    console.log(headline);
+  })
 
   return cardDiv
 
